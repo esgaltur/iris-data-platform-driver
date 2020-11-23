@@ -1,0 +1,9 @@
+Class User.procSOMESERIAL Extends %Library.RegisteredObject [ ClassType = "", DdlAllowed, Owner = {_SYSTEM}, Not ProcedureBlock ]
+{
+
+ClassMethod GETSOMESERIAL() As %Library.Integer(MAXVAL=2147483647,MINVAL=-2147483648) [ SqlName = GETEMDIS_DONSERIAL, SqlProc ]
+{
+	quit $SEQ(^SOMEGENER)
+}
+
+}
