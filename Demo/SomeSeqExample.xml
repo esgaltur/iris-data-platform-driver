@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for UNIX (Ubuntu Server LTS for x86-64 Containers) 2020.1 (Build 215U)" ts="2020-11-24 01:04:58">
+<Class name="User.SomeTable">
+<Description>
+</Description>
+<Final>1</Final>
+<ClassType>persistent</ClassType>
+<DdlAllowed>1</DdlAllowed>
+<Owner>_SYSTEM</Owner>
+<ProcedureBlock>1</ProcedureBlock>
+<SqlRowIdPrivate>1</SqlRowIdPrivate>
+<SqlTableName>SomeTable</SqlTableName>
+<StorageStrategy/>
+<Super>%Persistent</Super>
+<TimeChanged>65707,3741.66097</TimeChanged>
+<TimeCreated>65626,69680.420945</TimeCreated>
+
+<Property name="id">
+<Type>%Library.BigInt</Type>
+<Required>1</Required>
+<SqlColumnNumber>2</SqlColumnNumber>
+<SqlFieldName>id</SqlFieldName>
+</Property>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DataLocation>^User.SomeTableD</DataLocation>
+<DefaultData>SomeTableDefaultData</DefaultData>
+<IdLocation>^User.SomeTableD</IdLocation>
+<IndexLocation>^User.SomeTableI</IndexLocation>
+<StreamLocation>^User.SomeTableS</StreamLocation>
+<Data name="SomeTableDefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>id</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+
+
+<Class name="User.procSOMESEQNAME">
+<ClassType/>
+<DdlAllowed>1</DdlAllowed>
+<Owner>_SYSTEM</Owner>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>%Library.RegisteredObject</Super>
+<TimeChanged>65707,3835.057974</TimeChanged>
+<TimeCreated>65628,33554.84423</TimeCreated>
+
+<Method name="GETSOMESEQNAMESERIAL">
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Library.Integer</ReturnType>
+<SqlName>GETSOMESEQNAMESERIAL</SqlName>
+<SqlProc>1</SqlProc>
+<ReturnTypeParams>MAXVAL=2147483647,MINVAL=-2147483648</ReturnTypeParams>
+<Implementation><![CDATA[	quit $SEQ(^SOMEGENER)
+]]></Implementation>
+</Method>
+</Class>
+</Export>

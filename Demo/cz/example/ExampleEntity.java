@@ -18,7 +18,7 @@ public class SomeTable  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SomeGener")
-    @SequenceGenerator(name = "SomeGener", sequenceName = "SomeSegName", allocationSize = 1)
+    @SequenceGenerator(name = "SomeGener", sequenceName = "SomeSeqName", allocationSize = 1)
     @Column(name = "PrimaryKey", nullable = false, unique = true)
     private Long id;
   
