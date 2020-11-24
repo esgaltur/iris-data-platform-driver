@@ -26,6 +26,3 @@ when we need a new id, then stored procedure will be called:
  to get list of the sequence like stored procedures, then sql :
  SELECT SPECIFIC_NAME FROM INFORMATION_SCHEMA.ROUTINES where SPECIFIC_NAME like 'GET%SERIAL'
   
-=======
-  
->>>>>>> 44303cbd653aaf5734a238ebb71c473da2160091
