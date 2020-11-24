@@ -5,7 +5,7 @@ In my modificated driver,
 ```java
 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SomeGener")
 @SequenceGenerator(name = "SomeGener", sequenceName = "SomeSeqName", allocationSize = 1)
-Means, that i have created Stored procedure with the name GETSOMESEQSERIAL or if it doesn't exist, then automatically will be created.
+Means, that i have created Stored procedure with the name GETSOMESEQNAMESERIAL or if it doesn't exist, then automatically will be created.
 
 My idea was about to create a stored procedure which works with the globals with the unique name:
 ```objectscript
