@@ -1,6 +1,6 @@
-# Originally from the intersystems repository
+# Originally from the InterSystems repository
 ## List of the modifications:
-For the working in SQL in the Object Oriented Database, we need a sequence id generator.
+For the working in SQL in the Object-Oriented Database, we need a sequence id generator.
 In my modificated driver,
 ```java
 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SomeGener")
@@ -19,9 +19,9 @@ Class User.procSOMESEQNAMESERIAL Extends %Library.RegisteredObject [ ClassType =
 
 }
 Then, we can work with the stored procedure in Entity like with Sequence.
-when we need a new id, then stored procedure will be called:
+when we need a new id, then the stored procedure will be called:
  "select  GET".concat(sequenceName).concat("SERIAL").concat("()");" and expression on line quit $SEQ(^SOMEGENER) will return a number
- It is working like if it is a real sequence.
- to get list of the sequence like stored procedures, then sql :
+ It is working as if it is a real sequence.
+ to get the list of the Sequence like stored procedures, then SQL :
  SELECT SPECIFIC_NAME FROM INFORMATION_SCHEMA.ROUTINES where SPECIFIC_NAME like 'GET%SERIAL'
   
