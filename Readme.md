@@ -22,7 +22,6 @@ Then, we can work with the stored procedure in Entity like with Sequence.
 when we need a new id, then stored procedure will be called:
  "select  GET".concat(sequenceName).concat("SERIAL").concat("()");" and expression on line quit $SEQ(^SOMEGENER) will return a number
  It is working like if it is a real sequence.
-<<<<<<< HEAD
  to get list of the sequence like stored procedures, then sql :
  SELECT SPECIFIC_NAME FROM INFORMATION_SCHEMA.ROUTINES where SPECIFIC_NAME like 'GET%SERIAL'
   
