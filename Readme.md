@@ -9,10 +9,10 @@ Means, that i have created Stored procedure with the name GETSOMESEQNAMESERIAL o
 
 My idea was about to create a stored procedure which works with the globals with the unique name:
 ```objectscript
-Class User.procSOMESERIAL Extends %Library.RegisteredObject [ ClassType = "", DdlAllowed, Owner = {_SYSTEM}, Not ProcedureBlock ]
+Class User.procSOMESEQNAMESERIAL Extends %Library.RegisteredObject [ ClassType = "", DdlAllowed, Owner = {_SYSTEM}, Not ProcedureBlock ]
 {
 
-	ClassMethod GETSOMESERIAL() As %Library.Integer(MAXVAL=2147483647,MINVAL=-2147483648) [ SqlName = GETSOMESERIAL, SqlProc ]
+	ClassMethod GETSOMESEQNAMESERIAL () As %Library.Integer(MAXVAL=2147483647,MINVAL=-2147483648) [ SqlName = GETSOMESEQNAMESERIAL , SqlProc ]
 	{
 		quit $SEQ(^SOMEGENER)
 	}
